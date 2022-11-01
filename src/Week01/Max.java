@@ -1,15 +1,15 @@
-package Week01;
-// 최댓값 만들기
+package inheritance;
+
 public class Max {
 	public int solution(int[] numbers) {
         int max = getMax(numbers);
-	    
+
 	    for(int i= 0 ; i < numbers.length; i++) {
 	    	if(numbers[i] < max) {
 	    		numbers[i] *= max;
 	    	}
 	    }
-	   
+
         return max = getMax(numbers);
     }
     // 최댓값 구하는 메서드
@@ -20,12 +20,13 @@ public class Max {
 		    }
 		return max;
 	}
-    
+
     // 출력
     public static void main(String[] args) {
-    	int[] numbers = {0, 31, 24, 10, 1, 9};
+    	int[] numbers = {5, 5, 4, 5};
     	Max a = new Max();
-		
+
 		System.out.println(a.solution(numbers));
 	}
 } 
+
