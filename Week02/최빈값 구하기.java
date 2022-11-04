@@ -1,6 +1,6 @@
 class Solution {
     public int solution(int[] array) {
-        int answer = 0;
+       		int answer = 0;
 		int[] mode = mode(array);
 		int[] max = getMaxIndex(mode);
 		int count = 0;
@@ -14,7 +14,7 @@ class Solution {
 				}
 			} 
 			if(count > 0)  answer = -1;
-			else 		   answer = array[max[1]];
+			else 	       answer = array[max[1]];
 		}	
 
 		return answer;
@@ -36,7 +36,7 @@ class Solution {
 	}
 
     static int[] getMaxIndex(int[] arr) {
-    	int index = 0;
+    		int index = 0;
 		int max = 0;
 		for(int i = 0; i < arr.length; i++) {
 			if(max < arr[i]) {
