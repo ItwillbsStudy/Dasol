@@ -19,7 +19,7 @@ public class lotto_com {
 		else {
 			
 			for(int i = 0; i < k; i++) {
-				arr[i] = sc.nextInt();
+				arr[i] = sc.nextInt();	// 입력받은 
 			}
 		
 			combination(arr, 6, temp, 0, 0);
@@ -47,7 +47,7 @@ public class lotto_com {
 			
 		} else {
 			for (int i = start; i < arr.length; i++) {
-				if(arr[i] == 0) continue;
+				if(arr[i] == 0) continue;	// 배열 크기가 13이라 0도 들어있어서 0 나오면 쓰루..
 				temp[current] = arr[i];
 				combination(arr, r, temp, current+1, i+1);
 			}
