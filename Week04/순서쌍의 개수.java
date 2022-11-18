@@ -8,13 +8,13 @@ class Solution {
 	 * 이므로 6을 return
 	 * 
 	 * */
-    public int solution(int n) {		// N의 약수 개수 구하기
+    public int solution(int n) {	// N의 약수 개수 구하기
         int answer = 0;
         for(int i = 1; i <= n; i++) {	// i가 1부터 n까지 돌면서
-			if(n%i == 0) {				// n을 i로 나눴을 때 나머지가 0이면 i가 n의 약수임
-				answer++;				// 개수 카운트
-			}
+		if(n%i == 0) {		// n을 i로 나눴을 때 나머지가 0이면 i가 n의 약수임
+			answer++;	// 개수 카운트
 		}
+	}
         
         return answer;
     }
