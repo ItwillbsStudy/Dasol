@@ -3,7 +3,8 @@ import java.util.Scanner;
 public class Main {
 	
 	static int x1 = 0 , x2 = 0;	// 출발점과 오르막길 끝점 0으로 초기화
-	
+	static int start = 0;		// 시작점 저장할 변수
+	static int max = 0;		// 최댓값
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
@@ -13,8 +14,6 @@ public class Main {
 			arr[i] = sc.nextInt();
 		}
 		
-				int start = 0;
-		int max = 0;
 		
 		for(int i = 1; i < arr.length; i++) { 		// while 조건문이 i-1부터라 시작을 1로 지정
 			x1 = arr[start];			// 출발점 x1에 저장 (arr[0] 부터 시작)
