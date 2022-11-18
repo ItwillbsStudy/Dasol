@@ -8,11 +8,11 @@ class Solution {
     public String solution(int age) {
         String s = "";
         String str = "abcdefghij";
-        String[] sarr = str.split(""); // 0에 a, 1에 b ... 저장된 String 배열
+        String[] sarr = str.split("");  // 0에 a, 1에 b ... 저장된 String 배열
         while(age>0) {
         	s += sarr[age%10];	// 일의 자리에 대응되는 인덱스의 알파벳 저장
-        	age /= 10;			// 10으로 나누어 십의 자리가 일의 자리로 오게,,
-								// age가 0.XX 될때까지 반복	
+        	age /= 10;		// 10으로 나누어 십의 자리가 일의 자리로 오게,,
+					// age가 0.XX 될때까지 반복	
         }
         
      // 일의자리부터 저장되었을테니 문자 뒤집어주기
