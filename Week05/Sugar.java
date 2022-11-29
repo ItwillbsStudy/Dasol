@@ -1,6 +1,8 @@
+package Week5;
+
 import java.util.Scanner;
 
-public class Main {
+public class Sugar {
 	
 	public static void main(String[] args) {
 		/*
@@ -26,23 +28,24 @@ public class Main {
 		 * */
 		Scanner sc = new Scanner(System.in);
 		int N = sc.nextInt();
-        
 		int[] d = new int[N+1];
-		d[0] = 0;
-
+		d[0] = 0;		// i = 3, 5일 때 d[0] + 1 = 1 이어야 해서 d[0]에 0 넣어줌
+//		d[1] = -1;
+//		d[2] = -1;
+//		d[3] = 1;
+//		d[4] = -1;
+//		d[5] = 1;
 		for(int i = 1; i < N+1; i++) {
-			d[i] = -1;	// 기본은 -1 넣어두기
+			d[i] = -1;				// 기본은 -1 넣어두기
+			if(i >= 3 && d[i-3] != -1) 		d[i] = d[i-3] + 1;	// -3 가능하면 d[i] = d[i-3] + 1
+			if(i >= 5 && d[i-5] != -1) 		d[i] = d[i-5] + 1;	// -5 가능하면 d[i] = d[i-5] + 1
 			
-			if( i >= 3 && d[i-3] != -1)   d[i] = d[i-3] + 1;	// -3 가능하면 d[i] = d[i-3] + 1
-			if(i >= 5 && d[i-5] != -1)    d[i] = d[i-5] + 1;	// -5 가능하면 d[i] = d[i-5] + 1
-			
-			if(i >= 5 && d[i-3] != -1 && d[i-5] != -1) {		// -3, -5 둘다 가능할 땐 둘 중 최솟값 저장
+			if(i >= 5 && d[i-3] != -1 && d[i-5] != -1) {	// -3, -5 둘다 가능할 땐 둘 중 최솟값 저장
 				d[i] = Math.min(d[i-5] + 1, d[i-3] + 1);
 			}
 			
 			// i가 3 or 5 이상일 때 조건식은 i는 1부터 넣을거라 index아웃오브어쩌고 예외나서 추가한 조건식
 			// (ex. i = 2일 때 d[2-5] => d[-3]이라 오류..)
-			 
 			
 		}
 		System.out.println(d[N]);
