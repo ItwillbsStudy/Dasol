@@ -19,10 +19,12 @@ public class 스택 {
 		int result = 0;
 		int n = Integer.parseInt(br.readLine()); //Int
 		for(int i = 0; i < n; i++) {
-			// next() 메소드는 스페이스 즉 공백 전까지 입력받은 문자열을 리턴
 //			String input = sc.next();
-			// nextLine()메소드는 Enter를 치기 전까지 쓴 문자열을 모두 리턴
+			// next() 메소드는 스페이스 즉 공백 전까지 입력받은 문자열을 리턴
+			// nextLine()메소드는 Enter를 치기 전까지(줄바꿈 전 까지) 쓴 문자열을 모두 리턴
 			// 공백이 있는 문자열 한줄을 리턴받고 싶으면 nextLine() 메소드를 사용, 한단어를 받고싶다면 next() 사용
+			// readLine()도 nextLint()과 같음
+			// read()는 괄호 안에 출력할 byte를 지정해 주면 지정해 준 byte만큼 출력, 지정해 주지 않았다면 입력이 모두 끝날 때까지 읽어들임.
 			String input = br.readLine(); //String
 			if(input.contains("push")) {
 				int X = Integer.parseInt(input.substring(5));
