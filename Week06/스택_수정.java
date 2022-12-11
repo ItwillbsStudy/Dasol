@@ -48,7 +48,7 @@ public class 스택 {
 			
 		}
 		
-		bw.flush();
+		bw.flush();	// 버퍼에 들어있는 것을 비워주는 함수..
 		bw.close();
 		br.close();
 	}
